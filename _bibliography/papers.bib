@@ -1,395 +1,403 @@
-@misc{yang2024gateddeltanetworksimproving,
-      title={Gated Delta Networks: Improving Mamba2 with Delta Rule}, 
-      author={Songlin Yang and Jan Kautz and Ali Hatamizadeh},
-      year={2025},
-      abbr={ICLR},
-      html={https://arxiv.org/abs/2412.06464}, 
-      selected={true},
-      code={https://github.com/sustcsonglin/flash-linear-attention/tree/main/fla/models/gated_deltanet}
-}
-@misc{tan2024stickbreakingattention,
-      title={Stick-breaking Attention}, 
-      author={Shawn Tan and Yikang Shen and Songlin Yang and Aaron Courville and Rameswar Panda},
-      year={2025},
-      abbr={ICLR},
-      html={https://arxiv.org/abs/2410.17980}, 
-}
-
-@inproceedings{yang2024parallelizing,
-      title={Parallelizing Linear Transformers with the Delta Rule over Sequence Length}, 
-      author={Songlin Yang and Bailin Wang and Yu Zhang and Yikang Shen and Yoon Kim},
-      year={2024},
-      html={https://arxiv.org/abs/2406.06484},
-      abbr={NeurIPS},
-      selected={true},
-      code={https://github.com/sustcsonglin/flash-linear-attention/tree/main/fla/models/delta_net},
-      blog={https://sustcsonglin.github.io/blog/2024/deltanet-1/},
-      poster={https://sustcsonglin.github.io/assets/pdf/neurips24_poster_deltanet.pdf}
-}
-
-
 @inproceedings{gsa,
-      title={Gated Slot Attention for Efficient Linear-Time Sequence Modeling}, 
-      author={Yu Zhang* and Songlin Yang* and Ruijie Zhu and Yue Zhang and Leyang Cui and Yiqiao Wang and Bolun Wang and Freda Shi and Bailin Wang and Wei Bi and Peng Zhou and Guohong Fu
-},
-      year={2024},
-      html={https://arxiv.org/abs/2409.07146},
-      abbr={NeurIPS},
-      selected={true},
-      code={https://github.com/fla-org/flash-linear-attention/tree/main/fla/models/gsa},
-      poster={https://sustcsonglin.github.io/assets/pdf/neurips24_poster_gsa.pdf}
+  title    = {Gated Slot Attention for Efficient Linear-Time Sequence Modeling},
+  author   = {Yu Zhang* and Songlin Yang* and Ruijie Zhu and Yue Zhang and Leyang Cui and Yiqiao Wang and Bolun Wang and Freda Shi and Bailin Wang and Wei Bi and Peng Zhou and Guohong Fu
+              },
+  year     = {2024},
+  abbr     = {NeurIPS},
+  code     = {https://github.com/fla-org/flash-linear-attention/tree/main/fla/models/gsa},
+  html     = {https://arxiv.org/abs/2409.07146},
+  poster   = {https://sustcsonglin.github.io/assets/pdf/neurips24_poster_gsa.pdf},
+  selected = {false}
+}
+@inproceedings{ji-etal-2023-improving,
+  title     = {Improving Span Representation by Efficient Span-Level Attention},
+  author    = {Ji, Pengyu  and
+               Yang, Songlin  and
+               Tu, Kewei},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2023},
+  year      = {2023},
+  url       = {https://aclanthology.org/2023.findings-emnlp.747},
+  address   = {Singapore},
+  publisher = {Association for Computational Linguistics},
+  abbr      = {EMNLP findings},
+  abstract  = {High-quality span representations are crucial to natural language processing tasks involving span prediction and classification. Most existing methods derive a span representation by aggregation of token representations within the span. In contrast, we aim to improve span representations by considering span-span interactions as well as more comprehensive span-token interactions. Specifically, we introduce layers of span-level attention on top of a normal token-level transformer encoder. Given that attention between all span pairs results in $O(n^4)$ complexity ($n$ being the sentence length) and not all span interactions are intuitively meaningful, we restrict the range of spans that a given span could attend to, thereby reducing overall complexity to $O(n^3)$. We conduct experiments on various span-related tasks and show superior performance of our model surpassing baseline models. Our code is publicly available at \url{https://github.com/jipy0222/Span-Level-Attention}.},
+  doi       = {10.18653/v1/2023.findings-emnlp.747},
+  editor    = {Bouamor, Houda  and
+               Pino, Juan  and
+               Bali, Kalika},
+  month     = dec,
+  pages     = {11184--11192}
+}
+@inproceedings{liu-etal-2023-simple,
+  title     = {Simple Hardware-Efficient {PCFG}s with Independent Left and Right Productions},
+  author    = {Wei Liu* and
+               Songlin Yang* and
+               Yoon Kim and
+               Kewei Tu},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2023},
+  year      = {2023},
+  url       = {https://aclanthology.org/2023.findings-emnlp.113},
+  address   = {Singapore},
+  publisher = {Association for Computational Linguistics},
+  abbr      = {EMNLP findings},
+  abstract  = {Scaling dense PCFGs to thousands of nonterminals via low-rank parameterizations of the rule probability tensor has been shown to be beneficial for unsupervised parsing. However, PCFGs scaled this way still perform poorly as a language model, and even underperform similarly-sized HMMs. This work introduces $\emph{SimplePCFG}$, a simple PCFG formalism with independent left and right productions. Despite imposing a stronger independence assumption than the low-rank approach, we find that this formalism scales more effectively both as a language model and as an unsupervised parser. We further introduce $\emph{FlashInside}$, a hardware IO-aware implementation of the inside algorithm for efficiently scaling simple PCFGs. Through extensive experiments on multiple grammar induction benchmarks, we validate the effectiveness of simple PCFGs over low-rank baselines.},
+  code      = {https://github.com/sustcsonglin/TN-PCFG},
+  doi       = {10.18653/v1/2023.findings-emnlp.113},
+  editor    = {Bouamor, Houda  and
+               Pino, Juan  and
+               Bali, Kalika},
+  html      = {https://aclanthology.org/2023.findings-emnlp.113},
+  month     = dec,
+  pages     = {1662--1669},
+  selected  = {false}
+}
+
+@inproceedings{liu-etal-2023-structured,
+  title     = {Structured Mean-Field Variational Inference for Higher-Order Span-Based Semantic Role Labeling},
+  author    = {Liu, Wei  and
+               Yang, Songlin  and
+               Tu, Kewei},
+  booktitle = {Findings of the Association for Computational Linguistics: ACL 2023},
+  year      = {2023},
+  url       = {https://aclanthology.org/2023.findings-acl.58},
+  address   = {Toronto, Canada},
+  publisher = {Association for Computational Linguistics},
+  abbr      = {ACL findings},
+  abstract  = {In this work, we enhance higher-order graph-based approaches for span-based semantic role labeling (SRL) by means of structured modeling. To decrease the complexity of higher-order modeling, we decompose the edge from predicate word to argument span into three different edges, predicate-to-head (P2H), predicate-to-tail (P2T), and head-to-tail (H2T), where head/tail means the first/last word of the semantic argument span. As such, we use a CRF-based higher-order dependency parser and leverage Mean-Field Variational Inference (MFVI) for higher-order inference. Moreover, since semantic arguments of predicates are often constituents within a constituency parse tree, we can leverage such nice structural property by defining a TreeCRF distribution over all H2T edges, using the idea of partial marginalization to define structural training loss. We further leverage structured MFVI to enhance inference. We experiment on span-based SRL benchmarks, showing the effectiveness of both higher-order and structured modeling and the combination thereof. In addition, we show superior performance of structured MFVI against vanilla MFVI.},
+  doi       = {10.18653/v1/2023.findings-acl.58},
+  editor    = {Rogers, Anna  and
+               Boyd-Graber, Jordan  and
+               Okazaki, Naoaki},
+  month     = jul,
+  pages     = {918--931}
+}
+
+
+@inproceedings{lou-etal-2022-nested,
+  title     = {Nested Named Entity Recognition as Latent Lexicalized Constituency Parsing},
+  author    = {Lou, Chao  and
+               Yang, Songlin  and
+               Tu, Kewei},
+  booktitle = {Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  year      = {2022},
+  url       = {https://aclanthology.org/2022.acl-long.428},
+  address   = {Dublin, Ireland},
+  publisher = {Association for Computational Linguistics},
+  abbr      = {ACL},
+  abstract  = {Nested named entity recognition (NER) has been receiving increasing attention. Recently, Fu et al. (2020) adapt a span-based constituency parser to tackle nested NER. They treat nested entities as partially-observed constituency trees and propose the masked inside algorithm for partial marginalization. However, their method cannot leverage entity heads, which have been shown useful in entity mention detection and entity typing. In this work, we resort to more expressive structures, lexicalized constituency trees in which constituents are annotated by headwords, to model nested entities. We leverage the Eisner-Satta algorithm to perform partial marginalization and inference efficiently. In addition, we propose to use (1) a two-stage strategy (2) a head regularization loss and (3) a head-aware labeling loss in order to enhance the performance. We make a thorough ablation study to investigate the functionality of each component. Experimentally, our method achieves the state-of-the-art performance on ACE2004, ACE2005 and NNE, and competitive performance on GENIA, and meanwhile has a fast inference speed.},
+  doi       = {10.18653/v1/2022.acl-long.428},
+  editor    = {Muresan, Smaranda  and
+               Nakov, Preslav  and
+               Villavicencio, Aline},
+  month     = may,
+  pages     = {6183--6198}
+}
+
+@inproceedings{qin2023hierarchically,
+  title     = {Hierarchically Gated Recurrent Neural Network for Sequence Modeling},
+  author    = {Zhen Qin* and Songlin Yang* and Yiran Zhong},
+  booktitle = {Thirty-seventh Conference on Neural Information Processing Systems},
+  year      = {2023},
+  url       = {https://openreview.net/forum?id=P1TCHxJwLB},
+  abbr      = {NeurIPS},
+  abstract  = {Transformers have surpassed RNNs in popularity due to their superior abilities in
+               parallel training and long-term dependency modeling. Recently, there has been
+               a renewed interest in using linear RNNs for efficient sequence modeling. These
+               linear RNNs often employ gating mechanisms in the output of the linear recurrence
+               layer while ignoring the significance of using forget gates within the recurrence.
+               In this paper, we propose a gated linear RNN model dubbed Hierarchically Gated
+               Recurrent Neural Network (HGRN), which includes forget gates that are lower
+               bounded by a learnable value. The lower bound increases monotonically when
+               moving up layers. This allows the upper layers to model long-term dependencies
+               and the lower layers to model more local, short-term dependencies. Experiments
+               on language modeling, image classification, and long-range arena benchmarks
+               showcase the efficiency and effectiveness of our proposed model. The source code
+               is available at https://github.com/OpenNLPLab/HGRN},
+  code      = {https://github.com/OpenNLPLab/HGRN},
+  html      = {https://openreview.net/forum?id=P1TCHxJwLB}
 }
 
 @inproceedings{Qin2024HGRN2GL,
-  title={HGRN2: Gated Linear RNNs with State Expansion},
-  author={Zhen Qin* and Songlin Yang* and Weixuan Sun and Xuyang Shen and Dong Li and Weigao Sun and Yiran Zhong},
-  year={2024},
-  html={https://api.semanticscholar.org/CorpusID:269043328},
-  selected={false},
-  abbr={COLM},
-  code={https://github.com/sustcsonglin/flash-linear-attention/tree/main/fla/models/hgrn2},
+  title    = {HGRN2: Gated Linear RNNs with State Expansion},
+  author   = {Zhen Qin* and Songlin Yang* and Weixuan Sun and Xuyang Shen and Dong Li and Weigao Sun and Yiran Zhong},
+  year     = {2024},
+  abbr     = {COLM},
+  code     = {https://github.com/sustcsonglin/flash-linear-attention/tree/main/fla/models/hgrn2},
+  html     = {https://api.semanticscholar.org/CorpusID:269043328},
+  selected = {false}
 }
 
-@inproceedings{Yang2023GatedLA,
-  title={Gated Linear Attention Transformers with Hardware-Efficient Training},
-  author={Songlin Yang* and Bailin Wang* and Yikang Shen and Rameswar Panda and Yoon Kim},
-  year={2024},
-  url={https://api.semanticscholar.org/CorpusID:266162792},
-  abstract={Transformers with linear attention allow for efficient parallel training but can simultaneously be formulated as an RNN with 2D (matrix-valued) hidden states, thus enjoying linear (with respect to output length) inference complexity. Recent works such as RetNet (Sun et al., 2023) and TransNormerLLM (Qin et al., 2023a) observe that adding a global decay term to the additive RNN update rule greatly improves performance, sometimes outperforming standard Transformers with softmax attention when trained at scale. In this work we show that adding a data-dependent gating mechanism further improves performance. We derive a parallel form of this gated linear attention layer that enables efficient training. However, a straightforward, numerically stable implementation of this parallel form requires generalized matrix multiplications in log-space for numerical stability, and thus cannot take advantage of tensor cores on modern GPUs which are optimized for standard matrix multiplications. We develop a hardware-efficient version of the parallel form that can still make use of tensor cores through block-parallel computations over sequence chunks. Experiments on moderate-scale language modeling (340M-parameter models trained on 15B tokens, 1.3B-parameter models trained on 100B tokens) show that gated linear attention (GLA) Transformers perform competitively against a strong LLaMA-architecture Transformer baseline (Touvron et al., 2023) as well as Mamba (Gu & Dao, 2023), a recently introduced state-space model with a data-dependent state transition mechanism. For training speed, our Triton-based implementation performs comparably to CUDA-optimized FlashAttention-2 (Dao, 2023) under the regular 2048 training length setting, while outperforming FlashAttention-2 when training on longer sequences beyond 4096.},
-  html={https://arxiv.org/abs/2312.06635},
-  selected={true},
-  abbr={ICML},
-  code={https://github.com/sustcsonglin/flash-linear-attention/tree/main/fla/models/gla},
-  poster={https://sustcsonglin.github.io/assets/pdf/icml24_poster_gla.pdf}
+@misc{tan2024stickbreakingattention,
+  title  = {Stick-breaking Attention},
+  author = {Shawn Tan and Yikang Shen and Songlin Yang and Aaron Courville and Rameswar Panda},
+  year   = {2025},
+  abbr   = {ICLR},
+  html   = {https://arxiv.org/abs/2410.17980}
 }
 
-@inproceedings{
-qin2023hierarchically,
-title={Hierarchically Gated Recurrent Neural Network for Sequence Modeling},
-author={Zhen Qin* and Songlin Yang* and Yiran Zhong},
-booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
-year={2023},
-url={https://openreview.net/forum?id=P1TCHxJwLB},
-abbr={NeurIPS},
-abstract={Transformers have surpassed RNNs in popularity due to their superior abilities in
-parallel training and long-term dependency modeling. Recently, there has been
-a renewed interest in using linear RNNs for efficient sequence modeling. These
-linear RNNs often employ gating mechanisms in the output of the linear recurrence
-layer while ignoring the significance of using forget gates within the recurrence.
-In this paper, we propose a gated linear RNN model dubbed Hierarchically Gated
-Recurrent Neural Network (HGRN), which includes forget gates that are lower
-bounded by a learnable value. The lower bound increases monotonically when
-moving up layers. This allows the upper layers to model long-term dependencies
-and the lower layers to model more local, short-term dependencies. Experiments
-on language modeling, image classification, and long-range arena benchmarks
-showcase the efficiency and effectiveness of our proposed model. The source code
-is available at https://github.com/OpenNLPLab/HGRN},
-html={https://openreview.net/forum?id=P1TCHxJwLB},
-code={https://github.com/OpenNLPLab/HGRN},
-}
-
-
-
-@inproceedings{liu-etal-2023-simple,
-    title = "Simple Hardware-Efficient {PCFG}s with Independent Left and Right Productions",
-  author = {Wei Liu* and
-                  Songlin Yang* and
-                  Yoon Kim and
-                  Kewei Tu},
-    editor = "Bouamor, Houda  and
-      Pino, Juan  and
-      Bali, Kalika",
-    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2023",
-    month = dec,
-    year = "2023",
-    address = "Singapore",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2023.findings-emnlp.113",
-    html = "https://aclanthology.org/2023.findings-emnlp.113",
-    doi = "10.18653/v1/2023.findings-emnlp.113",
-    pages = "1662--1669",
-    abstract = "Scaling dense PCFGs to thousands of nonterminals via low-rank parameterizations of the rule probability tensor has been shown to be beneficial for unsupervised parsing. However, PCFGs scaled this way still perform poorly as a language model, and even underperform similarly-sized HMMs. This work introduces $\emph{SimplePCFG}$, a simple PCFG formalism with independent left and right productions. Despite imposing a stronger independence assumption than the low-rank approach, we find that this formalism scales more effectively both as a language model and as an unsupervised parser. We further introduce $\emph{FlashInside}$, a hardware IO-aware implementation of the inside algorithm for efficiently scaling simple PCFGs. Through extensive experiments on multiple grammar induction benchmarks, we validate the effectiveness of simple PCFGs over low-rank baselines.",
-    selected={false},
-    abbr={EMNLP findings},
-    code={https://github.com/sustcsonglin/TN-PCFG}
-}
-
-@inproceedings{ji-etal-2023-improving,
-    title = "Improving Span Representation by Efficient Span-Level Attention",
-    author = "Ji, Pengyu  and
-      Yang, Songlin  and
-      Tu, Kewei",
-    editor = "Bouamor, Houda  and
-      Pino, Juan  and
-      Bali, Kalika",
-    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2023",
-    month = dec,
-    year = "2023",
-    address = "Singapore",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2023.findings-emnlp.747",
-    doi = "10.18653/v1/2023.findings-emnlp.747",
-    pages = "11184--11192",
-    abstract = "High-quality span representations are crucial to natural language processing tasks involving span prediction and classification. Most existing methods derive a span representation by aggregation of token representations within the span. In contrast, we aim to improve span representations by considering span-span interactions as well as more comprehensive span-token interactions. Specifically, we introduce layers of span-level attention on top of a normal token-level transformer encoder. Given that attention between all span pairs results in $O(n^4)$ complexity ($n$ being the sentence length) and not all span interactions are intuitively meaningful, we restrict the range of spans that a given span could attend to, thereby reducing overall complexity to $O(n^3)$. We conduct experiments on various span-related tasks and show superior performance of our model surpassing baseline models. Our code is publicly available at \url{https://github.com/jipy0222/Span-Level-Attention}.",
-    abbr="EMNLP findings"
-}
 
 
 @inproceedings{yan-etal-2023-joint,
-    title = "Joint Entity and Relation Extraction with Span Pruning and Hypergraph Neural Networks",
-    author = "Yan, Zhaohui  and
-      Yang, Songlin  and
-      Liu, Wei  and
-      Tu, Kewei",
-    editor = "Bouamor, Houda  and
-      Pino, Juan  and
-      Bali, Kalika",
-    booktitle = "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
-    month = dec,
-    year = "2023",
-    address = "Singapore",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2023.emnlp-main.467",
-    doi = "10.18653/v1/2023.emnlp-main.467",
-    pages = "7512--7526",
-    abstract = "Entity and Relation Extraction (ERE) is an important task in information extraction. Recent marker-based pipeline models achieve state-of-the-art performance, but still suffer from the error propagation issue. Also, most of current ERE models do not take into account higher-order interactions between multiple entities and relations, while higher-order modeling could be beneficial.In this work, we propose HyperGraph neural network for ERE (HGERE), which is built upon the PL-marker (a state-of-the-art marker-based pipleline model). To alleviate error propagation, we use a high-recall pruner mechanism to transfer the burden of entity identification and labeling from the NER module to the joint module of our model. For higher-order modeling, we build a hypergraph, where nodes are entities (provided by the span pruner) and relations thereof, and hyperedges encode interactions between two different relations or between a relation and its associated subject and object entities. We then run a hypergraph neural network for higher-order inference by applying message passing over the built hypergraph. Experiments on three widely used benchmarks (ACE2004, ACE2005 and SciERC) for ERE task show significant improvements over the previous state-of-the-art PL-marker.",
-    abbr = "EMNLP"
-}
-@inproceedings{yang-etal-2023-unsupervised,
-    title = "Unsupervised Discontinuous Constituency Parsing with Mildly Context-Sensitive Grammars",
-    author = "Yang, Songlin  and
-      Levy, Roger  and
-      Kim, Yoon",
-    editor = "Rogers, Anna  and
-      Boyd-Graber, Jordan  and
-      Okazaki, Naoaki",
-    booktitle = "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
-    month = jul,
-    year = "2023",
-    address = "Toronto, Canada",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2023.acl-long.316",
-    doi = "10.18653/v1/2023.acl-long.316",
-    pages = "5747--5766",
-    abstract = "We study grammar induction with mildly context-sensitive grammars for unsupervised discontinuous parsing. Using the probabilistic linear context-free rewriting system (LCFRS) formalism, our approach fixes the rule structure in advance and focuses on parameter learning with maximum likelihood. To reduce the computational complexity of both parsing and parameter estimation, we restrict the grammar formalism to LCFRS-2 (i.e., binary LCFRS with fan-out two) and further discard rules that require $O(l^6)$ time to parse, reducing inference to $O(l^5)$. We find that using a large number of nonterminals is beneficial and thus make use of tensor decomposition-based rank-space dynamic programming with an embedding-based parameterization of rule probabilities to scale up the number of nonterminals. Experiments on German and Dutch show that our approach is able to induce linguistically meaningful trees with continuous and discontinuous structures.",
-    abbr="ACL"
-}
-@inproceedings{yang-tu-2023-dont,
-    title = "Don{'}t Parse, Choose Spans! Continuous and Discontinuous Constituency Parsing via Autoregressive Span Selection",
-    author = "Yang, Songlin  and
-      Tu, Kewei",
-    editor = "Rogers, Anna  and
-      Boyd-Graber, Jordan  and
-      Okazaki, Naoaki",
-    booktitle = "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
-    month = jul,
-    year = "2023",
-    address = "Toronto, Canada",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2023.acl-long.469",
-    doi = "10.18653/v1/2023.acl-long.469",
-    pages = "8420--8433",
-    abstract = "We present a simple and unified approach for both continuous and discontinuous constituency parsing via autoregressive span selection. Constituency parsing aims to produce a set of non-crossing spans so that they can form a constituency parse tree. We sort gold spans using a predefined order and leverage a pointer network to autoregressively select spans by that order. To deal with discontinuous spans, we consecutively select their subspans from left to right, label all but last subspans with special discontinuous labels and the last subspan as the whole discontinuous spans{'} labels. We use simple heuristic to output valid trees so that our approach is able to predict all possible continuous and discontinuous constituency trees without sacrificing data coverage and without the need to use expensive chart-based parsing algorithms. Experiments on multiple continuous and discontinuous benchmarks show that our model achieves state-of-the-art or competitive performance.",
-    abbr= "ACL"
-}
-@inproceedings{liu-etal-2023-structured,
-    title = "Structured Mean-Field Variational Inference for Higher-Order Span-Based Semantic Role Labeling",
-    author = "Liu, Wei  and
-      Yang, Songlin  and
-      Tu, Kewei",
-    editor = "Rogers, Anna  and
-      Boyd-Graber, Jordan  and
-      Okazaki, Naoaki",
-    booktitle = "Findings of the Association for Computational Linguistics: ACL 2023",
-    month = jul,
-    year = "2023",
-    address = "Toronto, Canada",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2023.findings-acl.58",
-    doi = "10.18653/v1/2023.findings-acl.58",
-    pages = "918--931",
-    abstract = "In this work, we enhance higher-order graph-based approaches for span-based semantic role labeling (SRL) by means of structured modeling. To decrease the complexity of higher-order modeling, we decompose the edge from predicate word to argument span into three different edges, predicate-to-head (P2H), predicate-to-tail (P2T), and head-to-tail (H2T), where head/tail means the first/last word of the semantic argument span. As such, we use a CRF-based higher-order dependency parser and leverage Mean-Field Variational Inference (MFVI) for higher-order inference. Moreover, since semantic arguments of predicates are often constituents within a constituency parse tree, we can leverage such nice structural property by defining a TreeCRF distribution over all H2T edges, using the idea of partial marginalization to define structural training loss. We further leverage structured MFVI to enhance inference. We experiment on span-based SRL benchmarks, showing the effectiveness of both higher-order and structured modeling and the combination thereof. In addition, we show superior performance of structured MFVI against vanilla MFVI.",
-    abbr="ACL findings"
+  title     = {Joint Entity and Relation Extraction with Span Pruning and Hypergraph Neural Networks},
+  author    = {Yan, Zhaohui  and
+               Yang, Songlin  and
+               Liu, Wei  and
+               Tu, Kewei},
+  booktitle = {Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing},
+  year      = {2023},
+  url       = {https://aclanthology.org/2023.emnlp-main.467},
+  address   = {Singapore},
+  publisher = {Association for Computational Linguistics},
+  abbr      = {EMNLP},
+  abstract  = {Entity and Relation Extraction (ERE) is an important task in information extraction. Recent marker-based pipeline models achieve state-of-the-art performance, but still suffer from the error propagation issue. Also, most of current ERE models do not take into account higher-order interactions between multiple entities and relations, while higher-order modeling could be beneficial.In this work, we propose HyperGraph neural network for ERE (HGERE), which is built upon the PL-marker (a state-of-the-art marker-based pipleline model). To alleviate error propagation, we use a high-recall pruner mechanism to transfer the burden of entity identification and labeling from the NER module to the joint module of our model. For higher-order modeling, we build a hypergraph, where nodes are entities (provided by the span pruner) and relations thereof, and hyperedges encode interactions between two different relations or between a relation and its associated subject and object entities. We then run a hypergraph neural network for higher-order inference by applying message passing over the built hypergraph. Experiments on three widely used benchmarks (ACE2004, ACE2005 and SciERC) for ERE task show significant improvements over the previous state-of-the-art PL-marker.},
+  doi       = {10.18653/v1/2023.emnlp-main.467},
+  editor    = {Bouamor, Houda  and
+               Pino, Juan  and
+               Bali, Kalika},
+  month     = dec,
+  pages     = {7512--7526}
 }
 
-@inproceedings{yang-tu-2022-headed,
-    title = "Headed-Span-Based Projective Dependency Parsing",
-    author = "Yang, Songlin  and
-      Tu, Kewei",
-    editor = "Muresan, Smaranda  and
-      Nakov, Preslav  and
-      Villavicencio, Aline",
-    booktitle = "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
-    month = may,
-    year = "2022",
-    address = "Dublin, Ireland",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2022.acl-long.155",
-    doi = "10.18653/v1/2022.acl-long.155",
-    pages = "2188--2200",
-    abstract = "We propose a new method for projective dependency parsing based on headed spans. In a projective dependency tree, the largest subtree rooted at each word covers a contiguous sequence (i.e., a span) in the surface order. We call such a span marked by a root word \textit{headed span}. A projective dependency tree can be represented as a collection of headed spans. We decompose the score of a dependency tree into the scores of the headed spans and design a novel $O(n^3)$ dynamic programming algorithm to enable global training and exact inference. Our model achieves state-of-the-art or competitive results on PTB, CTB, and UD",
-    abbr = "ACL",
+@inproceedings{yang-etal-2020-second,
+  title     = {Second-Order Unsupervised Neural Dependency Parsing},
+  author    = {Yang, Songlin  and
+               Jiang, Yong  and
+               Han, Wenjuan  and
+               Tu, Kewei},
+  booktitle = {Proceedings of the 28th International Conference on Computational Linguistics},
+  year      = {2020},
+  url       = {https://aclanthology.org/2020.coling-main.347},
+  address   = {Barcelona, Spain (Online)},
+  publisher = {International Committee on Computational Linguistics},
+  abbr      = {COLING},
+  abstract  = {Most of the unsupervised dependency parsers are based on first-order probabilistic generative models that only consider local parent-child information. Inspired by second-order supervised dependency parsing, we proposed a second-order extension of unsupervised neural dependency models that incorporate grandparent-child or sibling information. We also propose a novel design of the neural parameterization and optimization methods of the dependency models. In second-order models, the number of grammar rules grows cubically with the increase of vocabulary size, making it difficult to train lexicalized models that may contain thousands of words. To circumvent this problem while still benefiting from both second-order parsing and lexicalization, we use the agreement-based learning framework to jointly train a second-order unlexicalized model and a first-order lexicalized model. Experiments on multiple datasets show the effectiveness of our second-order models compared with recent state-of-the-art methods. Our joint model achieves a 10{\%} improvement over the previous state-of-the-art parser on the full WSJ test set.},
+  doi       = {10.18653/v1/2020.coling-main.347},
+  editor    = {Scott, Donia  and
+               Bel, Nuria  and
+               Zong, Chengqing},
+  month     = dec,
+  pages     = {3911--3924}
+}
+
+
+@inproceedings{yang-etal-2021-neural,
+  title     = {Neural Bi-Lexicalized {PCFG} Induction},
+  author    = {Yang, Songlin  and
+               Zhao, Yanpeng  and
+               Tu, Kewei},
+  booktitle = {Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)},
+  year      = {2021},
+  url       = {https://aclanthology.org/2021.acl-long.209},
+  address   = {Online},
+  publisher = {Association for Computational Linguistics},
+  abbr      = {ACL},
+  abstract  = {Neural lexicalized PCFGs (L-PCFGs) have been shown effective in grammar induction. However, to reduce computational complexity, they make a strong independence assumption on the generation of the child word and thus bilexical dependencies are ignored. In this paper, we propose an approach to parameterize L-PCFGs without making implausible independence assumptions. Our approach directly models bilexical dependencies and meanwhile reduces both learning and representation complexities of L-PCFGs. Experimental results on the English WSJ dataset confirm the effectiveness of our approach in improving both running speed and unsupervised parsing performance.},
+  doi       = {10.18653/v1/2021.acl-long.209},
+  editor    = {Zong, Chengqing  and
+               Xia, Fei  and
+               Li, Wenjie  and
+               Navigli, Roberto},
+  month     = aug,
+  pages     = {2688--2699}
+}
+@inproceedings{yang-etal-2021-pcfgs,
+  title     = {{PCFG}s Can Do Better: Inducing Probabilistic Context-Free Grammars with Many Symbols},
+  author    = {Yang, Songlin  and
+               Zhao, Yanpeng  and
+               Tu, Kewei},
+  booktitle = {Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
+  year      = {2021},
+  url       = {https://aclanthology.org/2021.naacl-main.117},
+  address   = {Online},
+  publisher = {Association for Computational Linguistics},
+  abbr      = {NAACL},
+  abstract  = {Probabilistic context-free grammars (PCFGs) with neural parameterization have been shown to be effective in unsupervised phrase-structure grammar induction. However, due to the cubic computational complexity of PCFG representation and parsing, previous approaches cannot scale up to a relatively large number of (nonterminal and preterminal) symbols. In this work, we present a new parameterization form of PCFGs based on tensor decomposition, which has at most quadratic computational complexity in the symbol number and therefore allows us to use a much larger number of symbols. We further use neural parameterization for the new form to improve unsupervised parsing performance. We evaluate our model across ten languages and empirically demonstrate the effectiveness of using more symbols.},
+  doi       = {10.18653/v1/2021.naacl-main.117},
+  editor    = {Toutanova, Kristina  and
+               Rumshisky, Anna  and
+               Zettlemoyer, Luke  and
+               Hakkani-Tur, Dilek  and
+               Beltagy, Iz  and
+               Bethard, Steven  and
+               Cotterell, Ryan  and
+               Chakraborty, Tanmoy  and
+               Zhou, Yichao},
+  month     = jun,
+  pages     = {1487--1498}
+}
+@inproceedings{yang-etal-2022-dynamic,
+  title     = {Dynamic Programming in Rank Space: Scaling Structured Inference with Low-Rank {HMM}s and {PCFG}s},
+  author    = {Yang*, Songlin  and
+               Liu*, Wei  and
+               Tu, Kewei},
+  booktitle = {Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
+  year      = {2022},
+  url       = {https://aclanthology.org/2022.naacl-main.353},
+  address   = {Seattle, United States},
+  publisher = {Association for Computational Linguistics},
+  abbr      = {NAACL},
+  abstract  = {Hidden Markov Models (HMMs) and Probabilistic Context-Free Grammars (PCFGs) are widely used structured models, both of which can be represented as factor graph grammars (FGGs), a powerful formalism capable of describing a wide range of models. Recent research found it beneficial to use large state spaces for HMMs and PCFGs. However, inference with large state spaces is computationally demanding, especially for PCFGs. To tackle this challenge, we leverage tensor rank decomposition (aka. CPD) to decrease inference computational complexities for a subset of FGGs subsuming HMMs and PCFGs. We apply CPD on the factors of an FGG and then construct a new FGG defined in the rank space. Inference with the new FGG produces the same result but has a lower time complexity when the rank size is smaller than the state size. We conduct experiments on HMM language modeling and unsupervised PCFG parsing, showing better performance than previous work. Our code is publicly available at \url{https://github.com/VPeterV/RankSpace-Models}.},
+  doi       = {10.18653/v1/2022.naacl-main.353},
+  editor    = {Carpuat, Marine  and
+               de Marneffe, Marie-Catherine  and
+               Meza Ruiz, Ivan Vladimir},
+  month     = jul,
+  pages     = {4797--4809}
+}
+@inproceedings{yang-etal-2023-unsupervised,
+  title     = {Unsupervised Discontinuous Constituency Parsing with Mildly Context-Sensitive Grammars},
+  author    = {Yang, Songlin  and
+               Levy, Roger  and
+               Kim, Yoon},
+  booktitle = {Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  year      = {2023},
+  url       = {https://aclanthology.org/2023.acl-long.316},
+  address   = {Toronto, Canada},
+  publisher = {Association for Computational Linguistics},
+  abbr      = {ACL},
+  abstract  = {We study grammar induction with mildly context-sensitive grammars for unsupervised discontinuous parsing. Using the probabilistic linear context-free rewriting system (LCFRS) formalism, our approach fixes the rule structure in advance and focuses on parameter learning with maximum likelihood. To reduce the computational complexity of both parsing and parameter estimation, we restrict the grammar formalism to LCFRS-2 (i.e., binary LCFRS with fan-out two) and further discard rules that require $O(l^6)$ time to parse, reducing inference to $O(l^5)$. We find that using a large number of nonterminals is beneficial and thus make use of tensor decomposition-based rank-space dynamic programming with an embedding-based parameterization of rule probabilities to scale up the number of nonterminals. Experiments on German and Dutch show that our approach is able to induce linguistically meaningful trees with continuous and discontinuous structures.},
+  doi       = {10.18653/v1/2023.acl-long.316},
+  editor    = {Rogers, Anna  and
+               Boyd-Graber, Jordan  and
+               Okazaki, Naoaki},
+  month     = jul,
+  pages     = {5747--5766}
 }
 
 @inproceedings{yang-tu-2022-bottom,
-    title = "Bottom-Up Constituency Parsing and Nested Named Entity Recognition with Pointer Networks",
-    author = "Yang, Songlin  and
-      Tu, Kewei",
-    editor = "Muresan, Smaranda  and
-      Nakov, Preslav  and
-      Villavicencio, Aline",
-    booktitle = "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
-    month = may,
-    year = "2022",
-    address = "Dublin, Ireland",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2022.acl-long.171",
-    doi = "10.18653/v1/2022.acl-long.171",
-    pages = "2403--2416",
-    abstract = "Constituency parsing and nested named entity recognition (NER) are similar tasks since they both aim to predict a collection of nested and non-crossing spans. In this work, we cast nested NER to constituency parsing and propose a novel pointing mechanism for bottom-up parsing to tackle both tasks. The key idea is based on the observation that if we traverse a constituency tree in post-order, i.e., visiting a parent after its children, then two consecutively visited spans would share a boundary. Our model tracks the shared boundaries and predicts the next boundary at each step by leveraging a pointer network. As a result, it needs only linear steps to parse and thus is efficient. It also maintains a parsing configuration for structural consistency, i.e., always outputting valid trees. Experimentally, our model achieves the state-of-the-art performance on PTB among all BERT-based models (96.01 F1 score) and competitive performance on CTB7 in constituency parsing; and it also achieves strong performance on three benchmark datasets of nested NER: ACE2004, ACE2005, and GENIA. Our code will be available at \url{https://github.com/xxxxx}.",
-    abbr="ACL"
-}
-
-@inproceedings{lou-etal-2022-nested,
-    title = "Nested Named Entity Recognition as Latent Lexicalized Constituency Parsing",
-    author = "Lou, Chao  and
-      Yang, Songlin  and
-      Tu, Kewei",
-    editor = "Muresan, Smaranda  and
-      Nakov, Preslav  and
-      Villavicencio, Aline",
-    booktitle = "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
-    month = may,
-    year = "2022",
-    address = "Dublin, Ireland",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2022.acl-long.428",
-    doi = "10.18653/v1/2022.acl-long.428",
-    pages = "6183--6198",
-    abstract = "Nested named entity recognition (NER) has been receiving increasing attention. Recently, Fu et al. (2020) adapt a span-based constituency parser to tackle nested NER. They treat nested entities as partially-observed constituency trees and propose the masked inside algorithm for partial marginalization. However, their method cannot leverage entity heads, which have been shown useful in entity mention detection and entity typing. In this work, we resort to more expressive structures, lexicalized constituency trees in which constituents are annotated by headwords, to model nested entities. We leverage the Eisner-Satta algorithm to perform partial marginalization and inference efficiently. In addition, we propose to use (1) a two-stage strategy (2) a head regularization loss and (3) a head-aware labeling loss in order to enhance the performance. We make a thorough ablation study to investigate the functionality of each component. Experimentally, our method achieves the state-of-the-art performance on ACE2004, ACE2005 and NNE, and competitive performance on GENIA, and meanwhile has a fast inference speed.",
-    abbr="ACL"
-}
-
-@inproceedings{yang-etal-2022-dynamic,
-    title = "Dynamic Programming in Rank Space: Scaling Structured Inference with Low-Rank {HMM}s and {PCFG}s",
-    author = "Yang*, Songlin  and
-      Liu*, Wei  and
-      Tu, Kewei",
-    editor = "Carpuat, Marine  and
-      de Marneffe, Marie-Catherine  and
-      Meza Ruiz, Ivan Vladimir",
-    booktitle = "Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
-    month = jul,
-    year = "2022",
-    address = "Seattle, United States",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2022.naacl-main.353",
-    doi = "10.18653/v1/2022.naacl-main.353",
-    pages = "4797--4809",
-    abstract = "Hidden Markov Models (HMMs) and Probabilistic Context-Free Grammars (PCFGs) are widely used structured models, both of which can be represented as factor graph grammars (FGGs), a powerful formalism capable of describing a wide range of models. Recent research found it beneficial to use large state spaces for HMMs and PCFGs. However, inference with large state spaces is computationally demanding, especially for PCFGs. To tackle this challenge, we leverage tensor rank decomposition (aka. CPD) to decrease inference computational complexities for a subset of FGGs subsuming HMMs and PCFGs. We apply CPD on the factors of an FGG and then construct a new FGG defined in the rank space. Inference with the new FGG produces the same result but has a lower time complexity when the rank size is smaller than the state size. We conduct experiments on HMM language modeling and unsupervised PCFG parsing, showing better performance than previous work. Our code is publicly available at \url{https://github.com/VPeterV/RankSpace-Models}.",
-    abbr="NAACL"
+  title     = {Bottom-Up Constituency Parsing and Nested Named Entity Recognition with Pointer Networks},
+  author    = {Yang, Songlin  and
+               Tu, Kewei},
+  booktitle = {Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  year      = {2022},
+  url       = {https://aclanthology.org/2022.acl-long.171},
+  address   = {Dublin, Ireland},
+  publisher = {Association for Computational Linguistics},
+  abbr      = {ACL},
+  abstract  = {Constituency parsing and nested named entity recognition (NER) are similar tasks since they both aim to predict a collection of nested and non-crossing spans. In this work, we cast nested NER to constituency parsing and propose a novel pointing mechanism for bottom-up parsing to tackle both tasks. The key idea is based on the observation that if we traverse a constituency tree in post-order, i.e., visiting a parent after its children, then two consecutively visited spans would share a boundary. Our model tracks the shared boundaries and predicts the next boundary at each step by leveraging a pointer network. As a result, it needs only linear steps to parse and thus is efficient. It also maintains a parsing configuration for structural consistency, i.e., always outputting valid trees. Experimentally, our model achieves the state-of-the-art performance on PTB among all BERT-based models (96.01 F1 score) and competitive performance on CTB7 in constituency parsing; and it also achieves strong performance on three benchmark datasets of nested NER: ACE2004, ACE2005, and GENIA. Our code will be available at \url{https://github.com/xxxxx}.},
+  doi       = {10.18653/v1/2022.acl-long.171},
+  editor    = {Muresan, Smaranda  and
+               Nakov, Preslav  and
+               Villavicencio, Aline},
+  month     = may,
+  pages     = {2403--2416}
 }
 
 @inproceedings{yang-tu-2022-combining,
-    title = "Combining (Second-Order) Graph-Based and Headed-Span-Based Projective Dependency Parsing",
-    author = "Yang, Songlin  and
-      Tu, Kewei",
-    editor = "Muresan, Smaranda  and
-      Nakov, Preslav  and
-      Villavicencio, Aline",
-    booktitle = "Findings of the Association for Computational Linguistics: ACL 2022",
-    month = may,
-    year = "2022",
-    address = "Dublin, Ireland",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2022.findings-acl.112",
-    doi = "10.18653/v1/2022.findings-acl.112",
-    pages = "1428--1434",
-    abstract = "Graph-based methods, which decompose the score of a dependency tree into scores of dependency arcs, are popular in dependency parsing for decades. Recently, (CITATION) propose a headed-span-based method that decomposes the score of a dependency tree into scores of headed spans. They show improvement over first-order graph-based methods. However, their method does not score dependency arcs at all, and dependency arcs are implicitly induced by their cubic-time algorithm, which is possibly sub-optimal since modeling dependency arcs is intuitively useful. In this work, we aim to combine graph-based and headed-span-based methods, incorporating both arc scores and headed span scores into our model. First, we show a direct way to combine with $O(n^4)$ parsing complexity. To decrease complexity, inspired by the classical head-splitting trick, we show two $O(n^3)$ dynamic programming algorithms to combine first- and second-order graph-based and headed-span-based methods. Our experiments on PTB, CTB, and UD show that combining first-order graph-based and headed-span-based methods is effective. We also confirm the effectiveness of second-order graph-based parsing in the deep learning age, however, we observe marginal or no improvement when combining second-order graph-based and headed-span-based methods .",
-    abbr="ACL findings"
+  title     = {Combining (Second-Order) Graph-Based and Headed-Span-Based Projective Dependency Parsing},
+  author    = {Yang, Songlin  and
+               Tu, Kewei},
+  booktitle = {Findings of the Association for Computational Linguistics: ACL 2022},
+  year      = {2022},
+  url       = {https://aclanthology.org/2022.findings-acl.112},
+  address   = {Dublin, Ireland},
+  publisher = {Association for Computational Linguistics},
+  abbr      = {ACL findings},
+  abstract  = {Graph-based methods, which decompose the score of a dependency tree into scores of dependency arcs, are popular in dependency parsing for decades. Recently, (CITATION) propose a headed-span-based method that decomposes the score of a dependency tree into scores of headed spans. They show improvement over first-order graph-based methods. However, their method does not score dependency arcs at all, and dependency arcs are implicitly induced by their cubic-time algorithm, which is possibly sub-optimal since modeling dependency arcs is intuitively useful. In this work, we aim to combine graph-based and headed-span-based methods, incorporating both arc scores and headed span scores into our model. First, we show a direct way to combine with $O(n^4)$ parsing complexity. To decrease complexity, inspired by the classical head-splitting trick, we show two $O(n^3)$ dynamic programming algorithms to combine first- and second-order graph-based and headed-span-based methods. Our experiments on PTB, CTB, and UD show that combining first-order graph-based and headed-span-based methods is effective. We also confirm the effectiveness of second-order graph-based parsing in the deep learning age, however, we observe marginal or no improvement when combining second-order graph-based and headed-span-based methods .},
+  doi       = {10.18653/v1/2022.findings-acl.112},
+  editor    = {Muresan, Smaranda  and
+               Nakov, Preslav  and
+               Villavicencio, Aline},
+  month     = may,
+  pages     = {1428--1434}
 }
+
+@inproceedings{yang-tu-2022-headed,
+  title     = {Headed-Span-Based Projective Dependency Parsing},
+  author    = {Yang, Songlin  and
+               Tu, Kewei},
+  booktitle = {Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  year      = {2022},
+  url       = {https://aclanthology.org/2022.acl-long.155},
+  address   = {Dublin, Ireland},
+  publisher = {Association for Computational Linguistics},
+  abbr      = {ACL},
+  abstract  = {We propose a new method for projective dependency parsing based on headed spans. In a projective dependency tree, the largest subtree rooted at each word covers a contiguous sequence (i.e., a span) in the surface order. We call such a span marked by a root word \textit{headed span}. A projective dependency tree can be represented as a collection of headed spans. We decompose the score of a dependency tree into the scores of the headed spans and design a novel $O(n^3)$ dynamic programming algorithm to enable global training and exact inference. Our model achieves state-of-the-art or competitive results on PTB, CTB, and UD},
+  doi       = {10.18653/v1/2022.acl-long.155},
+  editor    = {Muresan, Smaranda  and
+               Nakov, Preslav  and
+               Villavicencio, Aline},
+  month     = may,
+  pages     = {2188--2200}
+}
+
 @inproceedings{yang-tu-2022-semantic,
-    title = "Semantic Dependency Parsing with Edge {GNN}s",
-    author = "Yang, Songlin  and
-      Tu, Kewei",
-    editor = "Goldberg, Yoav  and
-      Kozareva, Zornitsa  and
-      Zhang, Yue",
-    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2022",
-    month = dec,
-    year = "2022",
-    address = "Abu Dhabi, United Arab Emirates",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2022.findings-emnlp.452",
-    doi = "10.18653/v1/2022.findings-emnlp.452",
-    pages = "6096--6102",
-    abstract = "Second-order neural parsers have obtained high accuracy in semantic dependency parsing. Inspired by the factor graph representation of second-order parsing, we propose edge graph neural networks (E-GNNs). In an E-GNN, each node corresponds to a dependency edge, and the neighbors are defined in terms of sibling, co-parent, and grandparent relationships. We conduct experiments on SemEval 2015 Task 18 English datasets, showing the superior performance of E-GNNs.",
-    abbr="EMNLP findings"
+  title     = {Semantic Dependency Parsing with Edge {GNN}s},
+  author    = {Yang, Songlin  and
+               Tu, Kewei},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2022},
+  year      = {2022},
+  url       = {https://aclanthology.org/2022.findings-emnlp.452},
+  address   = {Abu Dhabi, United Arab Emirates},
+  publisher = {Association for Computational Linguistics},
+  abbr      = {EMNLP findings},
+  abstract  = {Second-order neural parsers have obtained high accuracy in semantic dependency parsing. Inspired by the factor graph representation of second-order parsing, we propose edge graph neural networks (E-GNNs). In an E-GNN, each node corresponds to a dependency edge, and the neighbors are defined in terms of sibling, co-parent, and grandparent relationships. We conduct experiments on SemEval 2015 Task 18 English datasets, showing the superior performance of E-GNNs.},
+  doi       = {10.18653/v1/2022.findings-emnlp.452},
+  editor    = {Goldberg, Yoav  and
+               Kozareva, Zornitsa  and
+               Zhang, Yue},
+  month     = dec,
+  pages     = {6096--6102}
 }
-@inproceedings{yang-etal-2021-pcfgs,
-    title = "{PCFG}s Can Do Better: Inducing Probabilistic Context-Free Grammars with Many Symbols",
-    author = "Yang, Songlin  and
-      Zhao, Yanpeng  and
-      Tu, Kewei",
-    editor = "Toutanova, Kristina  and
-      Rumshisky, Anna  and
-      Zettlemoyer, Luke  and
-      Hakkani-Tur, Dilek  and
-      Beltagy, Iz  and
-      Bethard, Steven  and
-      Cotterell, Ryan  and
-      Chakraborty, Tanmoy  and
-      Zhou, Yichao",
-    booktitle = "Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
-    month = jun,
-    year = "2021",
-    address = "Online",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2021.naacl-main.117",
-    doi = "10.18653/v1/2021.naacl-main.117",
-    pages = "1487--1498",
-    abstract = "Probabilistic context-free grammars (PCFGs) with neural parameterization have been shown to be effective in unsupervised phrase-structure grammar induction. However, due to the cubic computational complexity of PCFG representation and parsing, previous approaches cannot scale up to a relatively large number of (nonterminal and preterminal) symbols. In this work, we present a new parameterization form of PCFGs based on tensor decomposition, which has at most quadratic computational complexity in the symbol number and therefore allows us to use a much larger number of symbols. We further use neural parameterization for the new form to improve unsupervised parsing performance. We evaluate our model across ten languages and empirically demonstrate the effectiveness of using more symbols.",
-    abbr="NAACL"
+
+@inproceedings{yang-tu-2023-dont,
+  title     = {Don{'}t Parse, Choose Spans! Continuous and Discontinuous Constituency Parsing via Autoregressive Span Selection},
+  author    = {Yang, Songlin  and
+               Tu, Kewei},
+  booktitle = {Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  year      = {2023},
+  url       = {https://aclanthology.org/2023.acl-long.469},
+  address   = {Toronto, Canada},
+  publisher = {Association for Computational Linguistics},
+  abbr      = {ACL},
+  abstract  = {We present a simple and unified approach for both continuous and discontinuous constituency parsing via autoregressive span selection. Constituency parsing aims to produce a set of non-crossing spans so that they can form a constituency parse tree. We sort gold spans using a predefined order and leverage a pointer network to autoregressively select spans by that order. To deal with discontinuous spans, we consecutively select their subspans from left to right, label all but last subspans with special discontinuous labels and the last subspan as the whole discontinuous spans{'} labels. We use simple heuristic to output valid trees so that our approach is able to predict all possible continuous and discontinuous constituency trees without sacrificing data coverage and without the need to use expensive chart-based parsing algorithms. Experiments on multiple continuous and discontinuous benchmarks show that our model achieves state-of-the-art or competitive performance.},
+  doi       = {10.18653/v1/2023.acl-long.469},
+  editor    = {Rogers, Anna  and
+               Boyd-Graber, Jordan  and
+               Okazaki, Naoaki},
+  month     = jul,
+  pages     = {8420--8433}
 }
-@inproceedings{yang-etal-2021-neural,
-    title = "Neural Bi-Lexicalized {PCFG} Induction",
-    author = "Yang, Songlin  and
-      Zhao, Yanpeng  and
-      Tu, Kewei",
-    editor = "Zong, Chengqing  and
-      Xia, Fei  and
-      Li, Wenjie  and
-      Navigli, Roberto",
-    booktitle = "Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)",
-    month = aug,
-    year = "2021",
-    address = "Online",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2021.acl-long.209",
-    doi = "10.18653/v1/2021.acl-long.209",
-    pages = "2688--2699",
-    abstract = "Neural lexicalized PCFGs (L-PCFGs) have been shown effective in grammar induction. However, to reduce computational complexity, they make a strong independence assumption on the generation of the child word and thus bilexical dependencies are ignored. In this paper, we propose an approach to parameterize L-PCFGs without making implausible independence assumptions. Our approach directly models bilexical dependencies and meanwhile reduces both learning and representation complexities of L-PCFGs. Experimental results on the English WSJ dataset confirm the effectiveness of our approach in improving both running speed and unsupervised parsing performance.",
-    abbr="ACL"
+@inproceedings{Yang2023GatedLA,
+  title    = {Gated Linear Attention Transformers with Hardware-Efficient Training},
+  author   = {Songlin Yang* and Bailin Wang* and Yikang Shen and Rameswar Panda and Yoon Kim},
+  year     = {2024},
+  url      = {https://api.semanticscholar.org/CorpusID:266162792},
+  abbr     = {ICML},
+  abstract = {Transformers with linear attention allow for efficient parallel training but can simultaneously be formulated as an RNN with 2D (matrix-valued) hidden states, thus enjoying linear (with respect to output length) inference complexity. Recent works such as RetNet (Sun et al., 2023) and TransNormerLLM (Qin et al., 2023a) observe that adding a global decay term to the additive RNN update rule greatly improves performance, sometimes outperforming standard Transformers with softmax attention when trained at scale. In this work we show that adding a data-dependent gating mechanism further improves performance. We derive a parallel form of this gated linear attention layer that enables efficient training. However, a straightforward, numerically stable implementation of this parallel form requires generalized matrix multiplications in log-space for numerical stability, and thus cannot take advantage of tensor cores on modern GPUs which are optimized for standard matrix multiplications. We develop a hardware-efficient version of the parallel form that can still make use of tensor cores through block-parallel computations over sequence chunks. Experiments on moderate-scale language modeling (340M-parameter models trained on 15B tokens, 1.3B-parameter models trained on 100B tokens) show that gated linear attention (GLA) Transformers perform competitively against a strong LLaMA-architecture Transformer baseline (Touvron et al., 2023) as well as Mamba (Gu & Dao, 2023), a recently introduced state-space model with a data-dependent state transition mechanism. For training speed, our Triton-based implementation performs comparably to CUDA-optimized FlashAttention-2 (Dao, 2023) under the regular 2048 training length setting, while outperforming FlashAttention-2 when training on longer sequences beyond 4096.},
+  code     = {https://github.com/sustcsonglin/flash-linear-attention/tree/main/fla/models/gla},
+  html     = {https://arxiv.org/abs/2312.06635},
+  poster   = {https://sustcsonglin.github.io/assets/pdf/icml24_poster_gla.pdf},
+  selected = {true}
 }
-@inproceedings{yang-etal-2020-second,
-    title = "Second-Order Unsupervised Neural Dependency Parsing",
-    author = "Yang, Songlin  and
-      Jiang, Yong  and
-      Han, Wenjuan  and
-      Tu, Kewei",
-    editor = "Scott, Donia  and
-      Bel, Nuria  and
-      Zong, Chengqing",
-    booktitle = "Proceedings of the 28th International Conference on Computational Linguistics",
-    month = dec,
-    year = "2020",
-    address = "Barcelona, Spain (Online)",
-    publisher = "International Committee on Computational Linguistics",
-    url = "https://aclanthology.org/2020.coling-main.347",
-    doi = "10.18653/v1/2020.coling-main.347",
-    pages = "3911--3924",
-    abstract = "Most of the unsupervised dependency parsers are based on first-order probabilistic generative models that only consider local parent-child information. Inspired by second-order supervised dependency parsing, we proposed a second-order extension of unsupervised neural dependency models that incorporate grandparent-child or sibling information. We also propose a novel design of the neural parameterization and optimization methods of the dependency models. In second-order models, the number of grammar rules grows cubically with the increase of vocabulary size, making it difficult to train lexicalized models that may contain thousands of words. To circumvent this problem while still benefiting from both second-order parsing and lexicalization, we use the agreement-based learning framework to jointly train a second-order unlexicalized model and a first-order lexicalized model. Experiments on multiple datasets show the effectiveness of our second-order models compared with recent state-of-the-art methods. Our joint model achieves a 10{\%} improvement over the previous state-of-the-art parser on the full WSJ test set.",
-    abbr="COLING"
+@misc{yang2024gateddeltanetworksimproving,
+  title    = {Gated Delta Networks: Improving Mamba2 with Delta Rule},
+  author   = {Songlin Yang and Jan Kautz and Ali Hatamizadeh},
+  year     = {2025},
+  abbr     = {ICLR},
+  code     = {https://github.com/sustcsonglin/flash-linear-attention/tree/main/fla/models/gated_deltanet},
+  html     = {https://arxiv.org/abs/2412.06464},
+  selected = {true}
+}
+@inproceedings{yang2024parallelizing,
+  title    = {Parallelizing Linear Transformers with the Delta Rule over Sequence Length},
+  author   = {Songlin Yang and Bailin Wang and Yu Zhang and Yikang Shen and Yoon Kim},
+  year     = {2024},
+  abbr     = {NeurIPS},
+  blog     = {https://sustcsonglin.github.io/blog/2024/deltanet-1/},
+  code     = {https://github.com/sustcsonglin/flash-linear-attention/tree/main/fla/models/delta_net},
+  html     = {https://arxiv.org/abs/2406.06484},
+  poster   = {https://sustcsonglin.github.io/assets/pdf/neurips24_poster_deltanet.pdf},
+  selected = {true}
+}
+@misc{yang2025pathattentionpositionencoding,
+  title    = {PaTH Attention: Position Encoding via Accumulating Householder Transformations},
+  author   = {Songlin Yang and Yikang Shen and Kaiyue Wen and Shawn Tan and Mayank Mishra and Liliang Ren and Rameswar Panda and Yoon Kim},
+  year     = {2025},
+  abbr     = {arXiv},
+  code     = {https://github.com/fla-org/flash-linear-attention/blob/main/fla/layers/path_attn.py},
+  html     = {https://arxiv.org/abs/2505.16381},
+  selected = {true}
 }
 
 
