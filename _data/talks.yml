@@ -1,0 +1,44 @@
+- title: "Modern Position Encoding in Transformers: RoPE/Yarn and PaTH"
+  date: 2025-08
+  location: "Remote"
+  pdf: "/assets/pdf/path_slides.pdf"
+  video: "https://www.youtube.com/watch?v=l6_fdwRvMPk"
+  description: "Introduction of RoPE/Yarn and PaTH for modern position encoding in transformers."
+
+- title: "Toward More Expressive yet Scalable RNNs: DeltaNet and Its Variants"
+  date: 2025-05
+  location: "Remote"
+  pdf: "/assets/pdf/deltanet_talk_slides.pdf"
+  description: "Introduction of DeltaNet and its variants for more expressive yet scalable RNNs."
+
+- title: "Linear attention and beyond"
+  or: "What's Next for Mamba? Towards More Expressive Recurrent Update Rules"
+  date: 2025-02
+  location: "Remote"
+  pdf: "/assets/pdf/talk_250117.pdf"
+  video: "https://www.youtube.com/watch?v=d0HJvGSWw8A"
+  description: "Discussion on developments in linear attention and its variants."
+
+- title: "Linear Transformers for Efficient Sequence Modeling"
+  date: 2024-08
+  location: "HazyResearch @ Standford"
+  pdf: "/assets/pdf/talk_linear_transformer.pdf"
+  description: "Introduction of linear transformers for efficient sequence modeling."
+
+- title: "Gated linear Recurrence for Efficient Sequence Modeling"
+  date: 2024-04
+  location: "Cornell Tech"
+  pdf: "/assets/pdf/talk_240425.pdf"
+  description: "Introduction of gated linear recurrence for efficient sequence modeling."
+
+
+# Add more talks below following this format:
+# - title: "Your Talk Title"
+#   date: YYYY-MM-DD
+#   venue: "Conference/Institution Name"
+#   location: "City, Country" or "Remote"
+#   pdf: "/assets/pdf/your_talk.pdf"
+#   description: "Brief description of the talk (optional)"
+#   slides: "/assets/pdf/slides.pdf"  # optional, if different from pdf
+#   video: "https://youtube.com/..."  # optional
+

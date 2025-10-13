@@ -35,8 +35,15 @@ Put your address / P.O. box / other info right below your picture. You can also 
 
 Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
 
-**Songlin (松琳)** is a second-year PhD student at [MIT CSAIL](https://www.csail.mit.edu/), advised by [Prof. Yoon Kim](https://people.csail.mit.edu/yoonkim/). She earned her bachelor's degree from [SUSTech](https://www.sustech.edu.cn/en/) in 2020 and her master's degree from [ShanghaiTech](https://www.shanghaitech.edu.cn/eng/) in 2023, where she was advised by [Prof. Kewei Tu](https://faculty.sist.shanghaitech.edu.cn/faculty/tukw/).
+**Songlin (松琳)** is a final PhD student at [MIT CSAIL](https://www.csail.mit.edu/), advised by [Prof. Yoon Kim](https://people.csail.mit.edu/yoonkim/). She is also a Member of Technical Staff at [Thinking Machines Lab](https://thinkingmachines.ai/).
 
-Her research focuses on the intersection of **machine learning systems** and **large language models**, with a particular interest in hardware-aware algorithm design for efficient sequence modeling — especially in linear attention models. For more on her work, see this [video](https://www.youtube.com/watch?v=d0HJvGSWw8A) and her [slides](https://github.com/sustcsonglin/linear-attention-and-beyond-slides/blob/main/main.pdf).
+Her research focuses on language model architectures, in particular attention mechanisms. 
 
-She is a strong advocate for open-source research 🐳. Explore the open-source library [flash-linear-attention](https://github.com/fla-org/flash-linear-attention) and the fully virtual seminar series [Advances in Sequence Modeling from Algorithmic Perspectives](https://asap-seminar.github.io/) — past talks are available [here](https://www.youtube.com/@ASAPSeminarSeries). The best way to reach her is through the [FLA Discord Community](https://discord.gg/vDaJTmKNcS).
+
+---
+
+<div style="font-size: 0.95em; line-height: 2.5;">
+  <i class="fa-brands fa-github fa-fw" style="margin-right: 0.5em;"></i><a href="https://github.com/fla-org/flash-linear-attention">Flash Linear Attention</a> <span style="font-size: 0.85em; color: #999;">efficient attention implementations in Triton</span><br>
+  <i class="fa-brands fa-discord fa-fw" style="margin-right: 0.5em;"></i><a href="https://discord.gg/vDaJTmKNcS">FLA Discord</a> <span style="font-size: 0.85em; color: #999;">community for Flash Linear Attention</span><br>
+  <i class="fa-solid fa-users fa-fw" style="margin-right: 0.5em;"></i><a href="https://asap-seminar.github.io/">ASAP Seminar</a> <span style="font-size: 0.85em; color: #999;">Advances in Sequence Modeling from Algorithmic Perspectives</span>
+</div>

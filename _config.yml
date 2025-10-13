@@ -4,7 +4,7 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Songlin
-middle_name: 
+middle_name:
 last_name: Yang
 email: yangsl66@mit.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
@@ -26,7 +26,7 @@ impressum_path:  # set to path to include impressum link in the footer, use the 
 # Profile
 # -----------------------------------------------------------------------------
 profile:
-  image: sonta.png   
+  image: sonta.png
   image_circular: false
 
 
@@ -127,8 +127,8 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name:  # blog_name will be displayed in your blog page
+blog_description:
 permalink: /blog/:year/:title/
 
 # Pagination
@@ -144,9 +144,9 @@ related_blog_posts:
 # the information below.
 giscus:
   repo:                          # <your-github-user-name>/<your-github-repo-name>
-  repo_id:                       # leave empty or specify your repo_id (see https://giscus.app/) 
+  repo_id:                       # leave empty or specify your repo_id (see https://giscus.app/)
   category: Comments             # name of the category under which discussions will be created
-  category_id:                   # leave empty or specify your category_id (see https://giscus.app/) 
+  category_id:                   # leave empty or specify your category_id (see https://giscus.app/)
   mapping: title                 # identify discussions by post title
   strict: 1                      # use strict identification mode
   reactions_enabled: 1           # enable (1) or disable (0) emoji reactions
@@ -271,8 +271,8 @@ jekyll-archives:
     tag: '/blog/tag/:name/'
     category: '/blog/category/:name/'
 
-display_tags: ['formatting', 'images', 'links', 'math', 'code'] # these tags will be displayed on the front page of your blog
-display_categories: ['blockquotes'] # these categories will be displayed on the front page of your blog
+display_tags: [] # these tags will be displayed on the front page of your blog
+display_categories: [] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
