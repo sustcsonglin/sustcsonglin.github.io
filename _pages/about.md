@@ -45,5 +45,5 @@ Her research focuses on language model architectures, in particular attention me
 <div style="font-size: 0.95em; line-height: 2.5;">
   <i class="fa-brands fa-github fa-fw" style="margin-right: 0.5em;"></i><a href="https://github.com/fla-org/flash-linear-attention">Flash Linear Attention</a> <span style="font-size: 0.85em; color: #999;">efficient attention implementations in Triton</span><br>
   <i class="fa-brands fa-discord fa-fw" style="margin-right: 0.5em;"></i><a href="https://discord.gg/vDaJTmKNcS">FLA Discord</a> <span style="font-size: 0.85em; color: #999;">community for Flash Linear Attention</span><br>
-  <i class="fa-solid fa-users fa-fw" style="margin-right: 0.5em;"></i><a href="https://asap-seminar.github.io/">ASAP Seminar</a> <span style="font-size: 0.85em; color: #999;">Advances in Sequence Modeling from Algorithmic Perspectives</span>
+  <i class="fa-solid fa-users fa-fw" style="margin-right: 0.5em;"></i><a href="https://asap-seminar.github.io/">ASAP Seminar</a> <a href="https://www.youtube.com/@ASAPSeminarSeries" style="margin-left: 0.3em;"><i class="fa-brands fa-youtube"></i></a> <span style="font-size: 0.85em; color: #999;">Advances in Sequence Modeling from Algorithmic Perspectives</span>
 </div>
