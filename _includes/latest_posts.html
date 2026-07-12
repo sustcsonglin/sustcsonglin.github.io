@@ -27,7 +27,7 @@
                   {% assign external = false %}
                 {% endif %}
                 <a class="latest-post-card" href="{{ item_url }}"{% if external %} target="_blank" rel="noopener noreferrer"{% endif %}>
-                  <h3>{{ item.title | replace: ' (', ' - <br>' | replace: ')', '' }}</h3>
+                  <h3>{{ item.title | replace: ' (', ' - <span class="latest-post-title-part">' | replace: ')', '</span>' }}</h3>
                   <p>{{ item.description }}</p>
                   <small>{{ read_time }} min read <span>&middot;</span> <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}</small>
                 </a>
